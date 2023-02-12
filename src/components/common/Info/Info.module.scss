@@ -1,0 +1,41 @@
+@import 'main';
+
+.info {
+  @include flex-col(_, center);
+  padding-top: 75px;
+  &Title {
+    @include text(rem(24px), 400, $WHITE);
+    line-height: 120%;
+    @include media($SCREEN_TABLET_SMALL) {
+      font-size: rem(30px);
+    }
+  }
+  &Temp {
+    @include text(rem(60px), 400, $WHITE);
+    line-height: 125%;
+    @include media($SCREEN_TABLET_SMALL) {
+      font-size: rem(72px);
+    }
+  }
+  &Weather {
+    @include text(rem(15px), 500, rgba($WHITE, 0.6));
+    line-height: 120%;
+    margin-bottom: 5px;
+    @include media($SCREEN_TABLET_SMALL) {
+      font-size: rem(18px);
+      margin-bottom: 10px;
+    }
+  }
+  &Wrapper {
+    @include text(rem(15px), 400, $WHITE);
+    @include media($SCREEN_TABLET_SMALL) {
+      font-size: rem(18px);
+    }
+    &Temp {
+      margin-right: 10px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
